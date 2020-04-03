@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>text2url</title>
+	<script src="angular.min.js"></script>
+	<script src="angular-sanitize.min.js"></script>
+	<script src="text2url.js"></script>
+</head>
+<body style="text-align: center;">
+	<textarea ng-model="inputText" cols="88" rows="14" autofocus></textarea>
+	<div ng-repeat="link in (inputText | onlyLinks) track by $index">
+	  <a href="{{link}}" target="_blank" rel="noreferrer">{{link}}</a><br>
+	</div>
+	<div ng-controller="openAllLinks"><button ng-click="open()">Otvoriť všetky</button></div>
+</body>
+</html>
