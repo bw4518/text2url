@@ -11,7 +11,7 @@ app.filter('onlyLinks', () =>
 
 app.controller('openAllLinks', ($scope, $window) => {
     $scope.open = () => {
-  	var a = angular.element(document.getElementsByTagName('a'));
+  	var a = angular.element(document.getElementsByClassName('tiso'));
   	angular.forEach(a, link => $window.open(link.href, '_blank')); 
     };
 });
