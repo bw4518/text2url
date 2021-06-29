@@ -10,8 +10,8 @@
 <body style="text-align: center;">
 	<textarea ng-model="inputText" cols="88" rows="14" autofocus></textarea>
 	<div ng-repeat="link in (inputText | onlyLinks) track by $index">
-	  <a href="{{link}}" target="_blank" rel="noreferrer">{{link}}</a><br>
+	  <a href="{{link}}" target="_blank" rel="noreferrer noopener nofollow external" class="tiso">{{link}}</a><br>
 	</div>
-	<div ng-controller="openAllLinks"><button ng-click="open()">Otvoriť všetky</button></div>
+	<div ng-controller="openAllLinks"><button ng-click="open()">Open all</button></div>
 </body>
 </html>
